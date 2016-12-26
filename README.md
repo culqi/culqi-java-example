@@ -1,4 +1,4 @@
-# culqi-java-example-BETA
+# Culqi Java Example BETA
 
 Este es un ejemplo de [Culpi-Java 1.0 BETA](https://github.com/culqi/culqi-java/)
 
