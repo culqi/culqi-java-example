@@ -1,8 +1,8 @@
 # Culqi Java Example BETA
 
-Este es un ejemplo de [Culpi-Java 1.0 BETA](https://github.com/culqi/culqi-java/)
+Este es un ejemplo con [Culpi-Java 1.1](https://github.com/culqi/culqi-java/)
 
-### Datos de Prueba
+## Datos de Prueba
 
 <table>
   <tr>
@@ -19,8 +19,10 @@ Este es un ejemplo de [Culpi-Java 1.0 BETA](https://github.com/culqi/culqi-java/
   </tr>
 </table>
 
-# Licencia
+## Autor
 
-Copyright 2016 Culqi
+Willy Aguirre ([@marti1125](https://github.com/marti1125) - Team Culqi)
 
-Licensed under the MIT License
+## Licencia
+
+El código fuente de culqi-java-example-BETA está distribuido bajo MIT License, revisar el archivo [LICENSE](https://github.com/culqi/culqi-java-example-BETA/blob/master/LICENSE).
