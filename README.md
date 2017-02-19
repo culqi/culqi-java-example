@@ -1,6 +1,6 @@
-# Culqi Java Example BETA
+# Culqi Java Example
 
-Este es un ejemplo con [Culpi-Java 1.1](https://github.com/culqi/culqi-java/)
+Este es un ejemplo con [Culpi-Java 1.3](https://github.com/culqi/culqi-java/)
 
 ## Datos de Prueba
 

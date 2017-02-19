@@ -1,13 +1,12 @@
 package com.culqi.example.controller;
 
 import com.culqi.Culqi;
-import com.culqi.model.Charge;
-import com.culqi.model.Security;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -18,27 +17,24 @@ import java.util.Map;
 public class Server {
 
     @RequestMapping(value= "/charges", method = RequestMethod.POST, produces = "application/json")
-    public String charges(@RequestParam("token") String token, @RequestParam("first_name") String first_name, @RequestParam("last_name") String last_name,  @RequestParam("email") String email) throws Exception {
+    public Map<String, Object> charges(@RequestParam("token") String token, @RequestParam("installments") String Installments) throws Exception {
 
-        Security culqi = new Culqi().init("pk_test_vzMuTHoueOMlgUPj","sk_test_UTCQSGcXW8bCyU59");
+        Culqi culqi = new Culqi("", "sk_test_UTCQSGcXW8bCyU59");
 
-        Charge charge = new Charge();
-        charge.setAddress("Avenida Lima 1232");
-        charge.setAddress_city("LIMA");
-        charge.setAmount(1000);
-        charge.setCountry_code("PE");
-        charge.setCurrency_code("PEN");
-        charge.setEmail(email);
-        charge.setFirst_name(first_name);
-        charge.setInstallments(0);
-        charge.setLast_name(last_name);
-        charge.setMetadata("");
-        charge.setPhone_number(3333339);
-        charge.setProduct_description("Venta de prueba");
-        charge.setToken_id(token);
-        Map<String, Object> data = charge.create(culqi);
+        Map<String, Object> charge = new HashMap<>();
 
-        return "{\"status\":\"201\",\"id\":\"" + data.get("id").toString() + "\",\"message\":\""+data.get("user_message").toString()+"\"}";
+        Map<String, Object> metadata = new HashMap<String, Object>();
+        metadata.put("oder_id", "124");
+        charge.put("amount",1000);
+        //charge.put("capture", true);
+        charge.put("currency_code","PEN");
+        charge.put("description","Venta de prueba");
+        charge.put("email","test@culqi.com");
+        charge.put("installments", Integer.parseInt(Installments));
+        charge.put("metadata", metadata);
+        charge.put("source_id", token);
+
+        return culqi.charge.create(charge);
 
     }
 
