@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.culqi.example</groupId>
-    <artifactId>culqi-java-example-BETA</artifactId>
+    <artifactId>culqi-java-example</artifactId>
     <version>1.0</version>
 
     <parent>
