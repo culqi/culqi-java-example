@@ -1,6 +1,7 @@
-package com.culqi.example.controller;
+package com.app.controller;
 
-import com.culqi.Culqi;
+import com.jculqi.Culqi;
+import com.jculqi.util.CurrencyCode;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +28,7 @@ public class Server {
         metadata.put("oder_id", "124");
         charge.put("amount",1000);
         charge.put("capture", true);
-        charge.put("currency_code","PEN");
+        charge.put("currency_code", CurrencyCode.PEN);
         charge.put("description","Venta de prueba");
         charge.put("email","test@culqi.com");
         charge.put("installments", 0);

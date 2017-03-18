@@ -1,4 +1,4 @@
-package com.culqi.example;
+package com.app;
 
 /**
  * Created by culqi on 12/26/16.

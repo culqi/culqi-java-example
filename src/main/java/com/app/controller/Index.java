@@ -1,4 +1,4 @@
-package com.culqi.example.controller;
+package com.app.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

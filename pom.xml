@@ -36,6 +36,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.culqi</groupId>
+            <artifactId>culqi-java</artifactId>
+            <version>1.1.8</version>
+        </dependency>
+
     </dependencies>
 
     <build>
