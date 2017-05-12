@@ -2,6 +2,31 @@
 
 Este es un ejemplo con [Culpi-Java 1.1.8](https://github.com/culqi/culqi-java/)
 
+## Instalación
+
+Instalación usando Maven:
+Solo necesita agregar el siguiente repositorio en el pom.xml
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+Y Luego agregar la dependencia
+
+```xml
+<dependency>
+    <groupId>com.github.culqi</groupId>
+    <artifactId>culqi-java</artifactId>
+    <version>v1.1.8</version>
+</dependency>
+```
+
+
 ## Datos de Prueba
 
 <table>
@@ -20,7 +45,9 @@ Este es un ejemplo con [Culpi-Java 1.1.8](https://github.com/culqi/culqi-java/)
 </table>
 
 
-## ¿Cómo instalar el jar de Culqi en un proyecto Maven? 
+## Instalación Manual
+
+### ¿Cómo instalar el jar de Culqi en un proyecto Maven? 
 
 ```bash
 mvn install:install-file -Dfile={dir}/culqi-java-1.1.8.jar  -DgroupId=com.culqi -DartifactId=culqi-java -Dversion={version} -Dpackaging=jar

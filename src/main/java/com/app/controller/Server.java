@@ -1,7 +1,7 @@
 package com.app.controller;
 
-import com.jculqi.Culqi;
-import com.jculqi.util.CurrencyCode;
+import com.culqi.Culqi;
+import com.culqi.util.CurrencyCode;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,10 +19,8 @@ public class Server {
 
     @RequestMapping(value= "/charges", method = RequestMethod.POST, produces = "application/json")
     public Map<String, Object> charges(@RequestParam("token") String token, @RequestParam("installments") int installments) throws Exception {
-
         Culqi culqi = new Culqi();
         culqi.secret_key = "sk_test_UTCQSGcXW8bCyU59";
-
         Map<String, Object> charge = new HashMap<String, Object>();
         Map<String, Object> metadata = new HashMap<String, Object>();
         metadata.put("oder_id", "124");
@@ -31,11 +29,10 @@ public class Server {
         charge.put("currency_code", CurrencyCode.PEN);
         charge.put("description","Venta de prueba");
         charge.put("email","test@culqi.com");
-        charge.put("installments", 0);
+        charge.put("installments", installments);
         charge.put("metadata", metadata);
         charge.put("source_id", token);
         return culqi.charge.create(charge);
-
     }
 
 }
